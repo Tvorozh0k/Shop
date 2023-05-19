@@ -1,3 +1,4 @@
+import java.time.LocalDate;
 import java.util.HashMap;
 
 /**
@@ -11,6 +12,11 @@ public class Purchase {
     private Integer clientID;
 
     /**
+     * Дата покупки
+     */
+    private LocalDate purchaseDate;
+
+    /**
      * Список купленных товаров: пара (ID, кол-во товара)
      */
     private HashMap<Integer, Integer> products = new HashMap<>();
@@ -20,8 +26,10 @@ public class Purchase {
      *
      * @param clientID ID клиента
      */
-    public Purchase(Integer clientID) {
+    public Purchase(Integer clientID, String purchaseDate)
+    {
         setClientID(clientID);
+        setPurchaseDate(purchaseDate);
     }
 
     /**
@@ -40,6 +48,10 @@ public class Purchase {
      */
     public Integer getClientID() {
         return this.clientID;
+    }
+
+    public void setPurchaseDate(String purchaseDate) {
+        this.purchaseDate = LocalDate.parse(purchaseDate);
     }
 
     /**
@@ -71,5 +83,9 @@ public class Purchase {
      */
     public HashMap<Integer, Integer> getProducts() {
         return this.products;
+    }
+
+    public String getPurchaseDate() {
+        return this.purchaseDate.toString();
     }
 }

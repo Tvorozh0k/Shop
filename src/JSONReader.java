@@ -74,7 +74,8 @@ public class JSONReader {
 
             Integer id = Integer.parseInt(obj.get("ID").toString());
             Integer clientID = Integer.parseInt(obj.get("ID клиента").toString());
-            Purchase purchase = new Purchase(clientID);
+            String puchaseDate = obj.get("Дата покупки").toString();
+            Purchase purchase = new Purchase(clientID, puchaseDate);
 
             JSONArray ja = (JSONArray) obj.get("Товары");
             Iterator itr2 = ja.iterator();

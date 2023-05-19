@@ -63,4 +63,8 @@ public class PurchaseList {
             throw new Exception("Покупки с заданным ID не существует");
         purchases.remove(id);
     }
+
+    HashMap<Integer, Purchase> getPurchases() {
+        return this.purchases;
+    }
 }

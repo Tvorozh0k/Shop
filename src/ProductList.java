@@ -100,4 +100,8 @@ public class ProductList {
         res += "+-------+----------------------------------------------------+----------+-------+\n";
         return res;
     }
+
+    HashMap<Integer, Product> getProducts() {
+        return this.products;
+    }
 }

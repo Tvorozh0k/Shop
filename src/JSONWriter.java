@@ -93,6 +93,7 @@ public class JSONWriter {
             JSONObject obj1 = new JSONObject();
 
             obj1.put("ID", id1);
+            obj1.put("Дата покупки", purchase.getPurchaseDate());
             obj1.put("ID клиента", purchase.getClientID());
 
             JSONArray ja = new JSONArray();

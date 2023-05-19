@@ -18,6 +18,7 @@ public class ClientList {
 
     /**
      * Конструктор
+     *
      * @param fileName название файла
      */
     public ClientList(String fileName) throws Exception {
@@ -27,6 +28,7 @@ public class ClientList {
 
     /**
      * Устанавливаем в JSON клиентов
+     *
      * @param fileName название файла
      */
     public void setClients(String fileName) throws Exception {
@@ -95,5 +97,9 @@ public class ClientList {
 
         res += "+-------+----------------------+-----------------+-----------------+------------+----------------------+-------------+------------+---------+\n";
         return res;
+    }
+
+    HashMap<Integer, Client> getClients() {
+        return this.clients;
     }
 }
